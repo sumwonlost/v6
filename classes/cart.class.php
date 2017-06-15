@@ -841,7 +841,7 @@ class Cart {
 			// Apply Discounts
 			$this->_applyDiscounts();
 
-			$this->basket['weight']  = sprintf('%.3F', $this->_weight);
+			$this->basket['weight']  = sprintf('%.4F', $this->_weight);
 			$this->basket['discount'] = sprintf('%.2F', $this->_discount);
 			$this->basket['subtotal'] = sprintf('%.2F', $this->_subtotal);
 			$taxes = $GLOBALS['tax']->fetchTaxAmounts();
@@ -1078,6 +1078,7 @@ class Cart {
 							$max_stock = $stock_level;
 						}
 					}
+					foreach ($GLOBALS['hooks']->load('class.cart.update.max_stock') as $hook) include $hook;
 					if (isset($max_stock)) {
 						if (isset($max_stock) && $quantity > $max_stock) {
 							if($max_stock <=0) {
