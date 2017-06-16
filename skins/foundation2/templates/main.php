@@ -121,7 +121,8 @@
                {/if}
                <a href="#" class="back-to-top"><span class="show-for-small-only"><svg class="icon"><use xlink:href="#icon-angle-up"></use></svg></span><span class="show-for-medium-up"><svg class="icon"><use xlink:href="#icon-angle-up"></use></svg> {$LANG.common.top}</span></a>
             </div>
-           <div class="row">
+            {if $SECTION_NAME=='home'}
+            <div class="row">
                <div class="medium-4 columns">
                   {include file='templates/box.featured.php'}
                </div>
@@ -131,7 +132,8 @@
                <div class="medium-4 columns">
                   {include file='templates/box.sale_items.php'}
                </div>
-            </div>
+             </div>
+             {/if}
             <footer>
                <div class="stripe">
                </div>
