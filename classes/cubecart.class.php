@@ -434,7 +434,7 @@ class Cubecart {
 	 */
 	private function _account() {
 		// Display profile overview
-		$GLOBALS['user']->is(true);
+		//$GLOBALS['user']->is(true);
 
 		$GLOBALS['gui']->addBreadcrumb($GLOBALS['language']->account['your_account'], 'index.php?_a=account');
 
