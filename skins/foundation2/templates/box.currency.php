@@ -15,7 +15,7 @@
    <ul id="currency-switch" data-dropdown-content class="f-dropdown">
       {foreach from=$CURRENCIES item=currency}
       {if $currency.code!==$CURRENT_CURRENCY.code}
-      <li class="text-left"><a href="{$currency.url}">{$currency.symbol_left|escape:'htmlall'} {$currency.code} {$currency.symbol_right|escape:'htmlall'} ({$currency.name})</a></li>
+      <li class="text-left"><a href="{$currency.url}">{$currency.symbol_left|escape:'htmlall'} {$currency.code} {$currency.symbol_right|escape:'htmlall'}{* ({$currency.name})*}</a></li>
       {/if}
       {/foreach}
    </ul>

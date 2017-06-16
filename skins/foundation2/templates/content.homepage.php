@@ -18,15 +18,15 @@
 {if $LATEST_PRODUCTS}
 <div id="content_latest_products">
    <h2>{$LANG.catalogue.latest_products}</h2>
-   <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3" data-equalizer>
+   <ul class="small-block-grid-2 medium-block-grid-5" data-equalizer>
       {foreach from=$LATEST_PRODUCTS item=product}
       <li>
          <form action="{$VAL_SELF}" method="post" class="panel add_to_basket">
             <div data-equalizer-watch>
                <div class="text-center">
-                  <a class="th" href="{$product.url}" title="{$product.name}"><img src="{$product.image}" alt="{$product.name}"></a>
+                  <a href="{$product.url}" title="{$product.name}"><img src="{$product.image}" alt="{$product.name}"></a>
                </div>
-               <h3><a href="{$product.url}" title="{$product.name}">{$product.name|truncate:38:"&hellip;"}</a></h3>
+               <h3 class="text-center"><a href="{$product.url}" title="{$product.name}">{$product.name|truncate:100:"&hellip;"}</a></h3>
                {if $product.review_score && $CTRL_REVIEW}
                <div class="rating"> {for $i = 1; $i <= 5; $i++}
                   {if $product.review_score >= $i} <img src="{$STORE_URL}/skins/{$SKIN_FOLDER}/images/star.png" alt=""> {elseif $product.review_score > ($i - 1) && $product.review_score < $i} <img src="{$STORE_URL}/skins/{$SKIN_FOLDER}/images/star_half.png" alt=""> {else} <img src="{$STORE_URL}/skins/{$SKIN_FOLDER}/images/star_off.png" alt=""> {/if}
@@ -34,12 +34,15 @@
                </div>
                {/if}
             </div>
+            <div class="text-center">
             {if $product.ctrl_sale}
-            <span class="old_price">{$product.price}</span> <span class="sale_price">{$product.sale_price}</span>
+            <span class="actual_price">{$product.sale_price}</span><br>
+            <span class="old_price">{$product.price}</span> <span class="sale_price">{$LANG.catalogue.saving} {$product.saving}</span>
+            
             {else}
             {$product.price}
             {/if}
-
+            </div>
             {* Remove comment if you want info button
             <a href="{$product.url}" title="{$product.name}" class="button tiny secondary left">{$LANG.common.info}</a>
             *}

@@ -13,7 +13,7 @@
 <div class="right text-center">
    <div id="mini-basket">
       <div class="show-for-medium-up">
-         <div class="text-right"><a href="#" id="basket-summary"><svg class="icon icon-basket"><use xlink:href="#icon-basket"></use></svg> {$CART_TOTAL}</a></div>
+         <div class="text-right"><a href="#" id="basket-summary"><svg class="icon icon-basket"><use xlink:href="#icon-basket"></use></svg> {$CART_TOTAL} </a></div>
          <div class="basket-detail-container hide" id="basket-detail">
             <div class="mini-basket-arrow"></div>
             {include file='templates/box.basket.content.php'} 

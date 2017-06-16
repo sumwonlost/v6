@@ -12,7 +12,7 @@
 <div id="box-documents">
    <h3 class="hide">{$LANG.common.information}</h3>
    <nav>
-      <ul class="small-block-grid-1">
+      <ul class="small-block-grid-1 medium-block-grid-3">
          {foreach from=$DOCUMENTS item=document}
          <li><a href="{$document.doc_url}" title="{$document.doc_name}" {if $document.doc_url_openin}target="_blank"{/if}>{$document.doc_name}</a></li>
          {/foreach}

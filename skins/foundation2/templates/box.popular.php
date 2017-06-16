@@ -13,8 +13,11 @@
 <div class="panel" id="box-popular">
   <h3>{$LANG.catalogue.title_popular}</h3>
   <ol>
-	{foreach from=$POPULAR item=product}
-	<li><a href="{$product.url}" title="{$product.name}">{$product.name}</a><br>
+	{foreach from=$POPULAR item=product name="bestselling"}
+    {if $SECTION_NAME=='home' && $smarty.foreach.bestselling.index == 5}
+      {break}
+    {/if}
+	<li><a href="{$product.url}" title="{$product.name}">{$product.name|truncate:42:"&hellip;"}</a><br>
 	{if $product.ctrl_sale}
          <span class="old_price">{$product.price}</span> <span class="sale_price">{$product.sale_price}</span>
     {else}

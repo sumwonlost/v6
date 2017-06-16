@@ -13,9 +13,12 @@
 <div class="panel" id="box-sale_items">
   <h3>{$LANG.catalogue.title_saleitems}</h3>
   <ul>
-  {foreach from=$PRODUCTS item=product}
+  {foreach from=$PRODUCTS item=product name="sale_items"}
+    {if $SECTION_NAME=='home' && $smarty.foreach.sale_items.index == 5}
+      {break}
+    {/if}
 	<li>
-	  <a href="{$product.url}" title="{$product.name} ({if {$product.saving}}{$LANG.catalogue.saving} {$product.saving}{/if})">{$product.name}</a><br>
+	  <a href="{$product.url}" title="{$product.name} ({if {$product.saving}}{$LANG.catalogue.saving} {$product.saving}{/if})">{$product.name|truncate:42:"&hellip;"}</a><br>
 	  <span class="old_price">{$product.price}</span> <span class="sale_price">{$product.sale_price}</span>
 	</li>
   {/foreach}

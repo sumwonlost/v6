@@ -12,6 +12,14 @@ jQuery(document).ready(function() {
         $('.horizontal a.open-clearing').css({'min-height':ip_height+'px', 'max-height': ip_height+'px'});
     }
 
+    if($("#small_search_button").click(function() {
+        $('#small_search_box').slideDown();
+    }));
+
+    if($("#close_small_search").click(function() {
+        $('#small_search_box').slideUp();
+    }));
+
     if($("#scrollContent").length>0) {
         var scrolling = false;
         var scrollArea = document.querySelector('#scrollContent');

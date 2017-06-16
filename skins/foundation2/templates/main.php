@@ -27,7 +27,7 @@
       {/if}
       <link href="{$STORE_URL}/skins/{$SKIN_FOLDER}/css/jquery.bxslider.css" rel="stylesheet">
       <link href="{$STORE_URL}/skins/{$SKIN_FOLDER}/css/jquery.chosen.min.css" rel="stylesheet">
-      <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type='text/css'>
       {foreach from=$CSS key=css_keys item=css_files}
       <link href="{$STORE_URL}/{$css_files}" rel="stylesheet" type="text/css" media="screen">
       {/foreach}
@@ -53,12 +53,13 @@
    	  {/if}
       <div class="off-canvas-wrap" data-offcanvas>
          <div class="inner-wrap">
+            {include file='templates/box.search.small.php'}
             {include file='templates/box.off_canvas.right.php'}
             {include file='templates/box.off_canvas.left.php'}
             {include file='templates/box.eu_cookie.php'}
             <div id="header_wrapper">
                <div class="row">
-                  <div class="large-12 columns">
+                  <div class="large-12 columns" id="nav_boxes_session">
                      {include file='templates/box.session.php'}
                      <div class="right text-right"><a href="?_a=account">{$LANG.account.my_account}</a></div>
                   </div>
@@ -68,12 +69,20 @@
                      <a href="{$STORE_URL}" class="main-logo"><img src="{$STORE_LOGO}" alt="{$META_TITLE}"></a>
                   </div>
                   <div class="small-8 large-9 columns nav-boxes">
-                     <div class="row" id="nav-actions">
-                        <div class="small-12 columns">
-                           {include file='templates/box.basket.php'}
-                           {include file='templates/box.currency.php'}
+                     <div class="row collapse" id="nav-actions">
+                        <div class="small-{if $LANGUAGES}6{else}8{/if} columns">
+                           {include file='templates/box.search.php'}
+                        </div>
+                        {if $LANGUAGES}
+                        <div class="small-2 columns">
                            {include file='templates/box.language.php'}
-                           {include file='templates/box.search_link.php'}
+                        </div>
+                        {/if}
+                        <div class="small-2 columns">
+                           {include file='templates/box.currency.php'}
+                        </div>
+                        <div class="small-2 columns">
+                           {include file='templates/box.basket.php'}
                         </div>
                      </div>
                   </div>
@@ -112,6 +121,17 @@
                {/if}
                <a href="#" class="back-to-top"><span class="show-for-small-only"><svg class="icon"><use xlink:href="#icon-angle-up"></use></svg></span><span class="show-for-medium-up"><svg class="icon"><use xlink:href="#icon-angle-up"></use></svg> {$LANG.common.top}</span></a>
             </div>
+           <div class="row">
+               <div class="medium-4 columns">
+                  {include file='templates/box.featured.php'}
+               </div>
+               <div class="medium-4 columns">
+                  {include file='templates/box.popular.php'}
+               </div>
+               <div class="medium-4 columns">
+                  {include file='templates/box.sale_items.php'}
+               </div>
+            </div>
             <footer>
                <div class="stripe">
                </div>
@@ -124,16 +144,15 @@
                      <div class="row">
                         <div class="large-12 columns">
                            {include file='templates/box.newsletter.php'}
-                           <div class="show-for-small-only">{$COPYRIGHT}</div>
                         </div>
                      </div>
                   </div>
                </div>
                <div class="row">
-                  <div class="small-7 columns">
+                  <div class="medium-7 columns">
                      {$COPYRIGHT}
                   </div>
-                  <div class="small-5 columns">
+                  <div class="medium-5 columns">
                   {include file='templates/ccpower.php'}
                   </div>
                </div>

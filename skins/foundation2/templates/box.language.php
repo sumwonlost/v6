@@ -11,7 +11,7 @@
  *}
 {if $LANGUAGES}
 <div class="right text-center show-for-medium-up" id="box-language">
-   <a href="#" data-dropdown="language-switch" class="button white small" title="{$current_language.title}"><span class="flag flag-{$current_language.code|substr:3:2}"></span></a>
+   <a href="#" data-dropdown="language-switch" title="{$current_language.title}"><span class="flag flag-{$current_language.code|substr:3:2}"></span></a>
    <ul id="language-switch" data-dropdown-content class="f-dropdown">
       {foreach from=$LANGUAGES item=language}
       {if $current_language.code!==$language.code}
