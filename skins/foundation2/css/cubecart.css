@@ -8,6 +8,13 @@ a {
 footer a {
     color: #2287a4;
 }
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    box-shadow: none;
+    padding: 0;
+}
 a.open-clearing {
     display: block;
     overflow: hidden;
@@ -100,13 +107,13 @@ ul.breadcrumbs {
   fill: currentColor;
 }
 footer .stripe {
-    height: 10px;
+    height: 15px;
     background: repeating-linear-gradient(
       45deg,
-      #155365,
-      #155365 10px,
-      #082128 10px,
-      #082128 20px
+      #2ba6cb,
+      #2ba6cb 10px,
+      #2695b6 10px,
+      #2695b6 20px
     );
     margin-bottom: 10px;
 }
