@@ -1,6 +1,17 @@
 ;
 jQuery(document).ready(function() {
 
+    /* We could use "form input:valid" instead but all fields must be required */
+    $('.floater input, .floater textarea').focusin(function(){
+      $(this).parent().addClass('has-value');
+    });
+
+    $('.floater input, .floater textarea').blur(function(){
+      if(!$(this).val().length > 0) {
+        $(this).parent().removeClass('has-value');
+      }
+    });
+
     if($('.horizontal a.open-clearing img#img-preview').length) {
         var ip = $('.horizontal a.open-clearing img#img-preview');
         var ip_height = ip.height();
@@ -214,10 +225,8 @@ jQuery(document).ready(function() {
                 }
             } else {
                 var input = document.createElement('input');
-                var placeholder = $('label[for="' + $(this).attr('rel') + '"]').text() + ' ' + $('#validate_required').text();
                 var replacement = $(input).attr({
                     'type': 'text',
-                    'placeholder': placeholder,
                     'id': $(target).attr('id'),
                     'name': $(target).attr('name'),
                     'class': $(target).attr('class'),

@@ -19,13 +19,18 @@
          {/foreach}
          <div class="row">
             <div class="small-12 columns">
-               <label for="login-username" class="show-for-medium-up">{$LANG.user.email_address}</label>
-               <input type="text" autocomplete="off" name="username" id="login-username" placeholder="{$LANG.user.email_address} {$LANG.form.required}" value="{$USERNAME}" required>
+               <div class="floater">
+                  <input type="text" autocomplete="off" name="username" id="login-username" value="{$USERNAME}" required>
+                  <label for="login-username" class="show-for-medium-up">{$LANG.user.email_address}</label>
+               </div>
             </div>
          </div>
          <div class="row">
             <div class="small-12 columns">
-               <label for="login-password" class="show-for-medium-up">{$LANG.account.password}</label><input type="password" autocomplete="off" name="password" id="login-password" placeholder="{$LANG.account.password} {$LANG.form.required}" required>
+               <div class="floater">
+                  <input type="password" autocomplete="off" name="password" id="login-password" required>
+                  <label for="login-password" class="show-for-medium-up">{$LANG.account.password}</label>
+               </div>
             </div>
          </div>
          <div class="row">
@@ -34,7 +39,8 @@
             </div>
          </div>
          <div class="row">
-            <div class="small-12 columns"><input type="checkbox" name="remember" id="login-remember" value="1" {if $REMEMBER}checked{/if}><label for="login-remember">{$LANG.account.remember_me}</label></div>
+            <div class="small-12 columns">
+               <input type="checkbox" name="remember" id="login-remember" value="1" {if $REMEMBER}checked{/if}><label for="login-remember">{$LANG.account.remember_me}</label></div>
          </div>
          <div class="row">
             <div class="small-12 columns">

@@ -8,13 +8,85 @@ a {
 footer a {
     color: #2287a4;
 }
-input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+
+/* Start Floating Labels */
+.floater {
+  position: relative;
+  margin-bottom: 20px;
+  
+}
+
+.floater input:-webkit-autofill,
+.floater input:-webkit-autofill:hover, 
+.floater input:-webkit-autofill:focus
+.floater input:-webkit-autofill, 
+.floater textarea:-webkit-autofill,
+.floater textarea:-webkit-autofill:hover
+.floater textarea:-webkit-autofill:focus,
+.floater select:-webkit-autofill,
+.floater select:-webkit-autofill:hover,
+.floater select:-webkit-autofill:focus {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  -webkit-text-fill-color: #4d4d4d;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.floater [type='text'],
+.floater [type='password'],
+.floater textarea {
     border-top: none;
     border-right: none;
     border-left: none;
     box-shadow: none;
     padding: 0;
 }
+.floater input[type="text"]:focus,
+.floater input[type="password"]:focus,
+.floater textarea:focus {
+    background: none;
+}
+
+.floater label {
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  top: 8px;
+  bottom: 0;
+  transition: all 0.2s ease-in;
+}
+
+.floater.has-value input,
+.floater.has-value textarea {
+    border-color: #999999;   
+}
+
+.floater input:-webkit-autofill ~ label,
+.floater input:-webkit-autofill:hover ~ label, 
+.floater input:-webkit-autofill:focus ~ label,
+.floater input:-webkit-autofill ~ label, 
+.floater textarea:-webkit-autofill ~ label,
+.floater textarea:-webkit-autofill:hover ~ label
+.floater textarea:-webkit-autofill:focus ~ label,
+.floater select:-webkit-autofill ~ label,
+.floater select:-webkit-autofill:hover ~ label,
+.floater select:-webkit-autofill:focus ~ label,
+.floater input:focus ~ label,
+.floater input:disabled[value] ~ label,
+.floater.has-value input ~ label{
+  top: -10px;
+  color: #2695b6;
+}
+
+.floater textarea:focus ~ label,
+.floater.has-value textarea ~ label {
+  top: -17px;
+  color: #2695b6;
+}
+/* End Floating Labels */
+
 a.open-clearing {
     display: block;
     overflow: hidden;
@@ -617,7 +689,6 @@ svg.remove-coupon {
 #content_latest_products .panel img {
 
 }
-
 /* Small viewport only */
 @media only screen and (max-width: 40em) {
   

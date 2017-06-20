@@ -16,28 +16,67 @@
    {$html}
    {/foreach}
    <div class="row">
-      <div class="small-4 columns"><label for="title" class="show-for-medium-up">{$LANG.user.title}</label><input type="text" name="title" id="title" value="{$DATA.title}" placeholder="{$LANG.user.title}"></div>
+      <div class="small-4 columns">
+         <div class="floater">
+            <input type="text" name="title" id="title" value="{$DATA.title}">
+            <label for="title" class="show-for-medium-up">{$LANG.user.title} {$LANG.common.optional}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="first_name" class="show-for-medium-up">{$LANG.user.name_first}</label><input type="text" name="first_name" id="first_name" value="{$DATA.first_name}" placeholder="{$LANG.user.name_first} {$LANG.form.required}" required ></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="first_name" id="first_name" value="{$DATA.first_name}" required >
+            <label for="first_name" class="show-for-medium-up">{$LANG.user.name_first}</label></div>
+         </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="last_name" class="show-for-medium-up">{$LANG.user.name_last}</label><input type="text" name="last_name" id="last_name" value="{$DATA.last_name}"  placeholder="{$LANG.user.name_last} {$LANG.form.required}" required></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="last_name" id="last_name" value="{$DATA.last_name}" required>
+            <label for="last_name" class="show-for-medium-up">{$LANG.user.name_last}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="email" class="show-for-medium-up">{$LANG.common.email}</label><input type="text" name="email" id="email" value="{$DATA.email}" placeholder="{$LANG.common.email}  {$LANG.form.required}" required ></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="email" id="email" value="{$DATA.email}" required>
+            <label for="email" class="show-for-medium-up">{$LANG.common.email}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="phone" class="show-for-medium-up">{$LANG.address.phone}</label><input type="text" name="phone" id="phone"  value="{$DATA.phone}" placeholder="{$LANG.address.phone} {$LANG.form.required}" required></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="phone" id="phone"  value="{$DATA.phone}" required>
+            <label for="phone" class="show-for-medium-up">{$LANG.address.phone}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="mobile" class="show-for-medium-up">{$LANG.address.mobile}</label><input type="text" name="mobile" id="mobile"  value="{$DATA.mobile}" placeholder="{$LANG.address.mobile}"></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="mobile" id="mobile"  value="{$DATA.mobile}">
+            <label for="mobile" class="show-for-medium-up">{$LANG.address.mobile} {$LANG.common.optional}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="password" class="show-for-medium-up">{$LANG.account.password}</label><input type="password" autocomplete="off" name="password" id="password" placeholder="{$LANG.account.password} {$LANG.form.required}" required ></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="password" autocomplete="off" name="password" id="password" required>
+            <label for="password" class="show-for-medium-up">{$LANG.account.password}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="passconf" class="show-for-medium-up">{$LANG.account.password_confirm}</label><input type="password" autocomplete="off" name="passconf" id="passconf" placeholder="{$LANG.account.password_confirm}  {$LANG.form.required}" required ></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="password" autocomplete="off" name="passconf" id="passconf" required>
+            <label for="passconf" class="show-for-medium-up">{$LANG.account.password_confirm}</label>
+         </div>
+      </div>
    </div>
    {include file='templates/content.recaptcha.php'}
    {if $TERMS_CONDITIONS}
