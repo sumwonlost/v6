@@ -19,7 +19,7 @@
       <div class="small-4 columns">
          <div class="floater">
             <input type="text" name="title" id="title" value="{$DATA.title}">
-            <label for="title" class="show-for-medium-up">{$LANG.user.title} {$LANG.common.optional}</label>
+            <label for="title">{$LANG.user.title} {$LANG.common.optional}</label>
          </div>
       </div>
    </div>
@@ -27,14 +27,14 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="first_name" id="first_name" value="{$DATA.first_name}" required >
-            <label for="first_name" class="show-for-medium-up">{$LANG.user.name_first}</label></div>
+            <label for="first_name">{$LANG.user.name_first}</label></div>
          </div>
    </div>
    <div class="row">
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="last_name" id="last_name" value="{$DATA.last_name}" required>
-            <label for="last_name" class="show-for-medium-up">{$LANG.user.name_last}</label>
+            <label for="last_name">{$LANG.user.name_last}</label>
          </div>
       </div>
    </div>
@@ -42,7 +42,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="email" id="email" value="{$DATA.email}" required>
-            <label for="email" class="show-for-medium-up">{$LANG.common.email}</label>
+            <label for="email">{$LANG.common.email}</label>
          </div>
       </div>
    </div>
@@ -50,7 +50,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="phone" id="phone"  value="{$DATA.phone}" required>
-            <label for="phone" class="show-for-medium-up">{$LANG.address.phone}</label>
+            <label for="phone">{$LANG.address.phone}</label>
          </div>
       </div>
    </div>
@@ -58,7 +58,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="mobile" id="mobile"  value="{$DATA.mobile}">
-            <label for="mobile" class="show-for-medium-up">{$LANG.address.mobile} {$LANG.common.optional}</label>
+            <label for="mobile">{$LANG.address.mobile} {$LANG.common.optional}</label>
          </div>
       </div>
    </div>
@@ -66,7 +66,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="password" autocomplete="off" name="password" id="password" required>
-            <label for="password" class="show-for-medium-up">{$LANG.account.password}</label>
+            <label for="password">{$LANG.account.password}</label>
          </div>
       </div>
    </div>
@@ -74,7 +74,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="password" autocomplete="off" name="passconf" id="passconf" required>
-            <label for="passconf" class="show-for-medium-up">{$LANG.account.password_confirm}</label>
+            <label for="passconf">{$LANG.account.password_confirm}</label>
          </div>
       </div>
    </div>

@@ -1,7 +1,7 @@
 ;
 jQuery(document).ready(function() {
 
-    /* We could use "form input:valid" instead but all fields must be required */
+    /* We could use "form input:valid" instead but all fields must be required to work */
     $('.floater input, .floater textarea').focusin(function(){
       $(this).parent().addClass('has-value');
     });
@@ -10,6 +10,11 @@ jQuery(document).ready(function() {
       if(!$(this).val().length > 0) {
         $(this).parent().removeClass('has-value');
       }
+    });
+    $('.floater input, .floater textarea').each(function(){
+        if($(this).val()) {
+           $(this).parent().addClass('has-value'); 
+        }
     });
 
     if($('.horizontal a.open-clearing img#img-preview').length) {

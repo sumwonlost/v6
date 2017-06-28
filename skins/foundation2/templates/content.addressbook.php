@@ -57,32 +57,71 @@
 <h2>{if $DATA.address_id>0}{$LANG.address.edit_address}{else}{$LANG.address.add_address}{/if}</h2>
 <form action="{$VAL_SELF}" method="post" id="addressbook_form" enctype="multipart/form-data">
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="addr_description">{$LANG.common.description}</label><input type="text" name="description" id="addr_description" value="{$DATA.description}" placeholder="{$LANG.address.example_address_description}"></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="description" id="addr_description" value="{$DATA.description}">
+            <label for="addr_description">{$LANG.common.description}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="addr_title">{$LANG.user.title}</label><input type="text" name="title" id="addr_title" value="{$DATA.title}" placeholder="{$LANG.user.title}"></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="title" id="addr_title" value="{$DATA.title}">
+            <label for="addr_title">{$LANG.user.title} {$LANG.common.optional}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="addr_first_name">{$LANG.user.name_first}</label><input type="text" name="first_name" id="addr_first_name" value="{$DATA.first_name}" required placeholder="{$LANG.user.name_first} {$LANG.form.required}"></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="first_name" id="addr_first_name" value="{$DATA.first_name}" required>
+            <label for="addr_first_name">{$LANG.user.name_first}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="addr_last_name">{$LANG.user.name_last}</label><input type="text" name="last_name" id="addr_last_name" value="{$DATA.last_name}" required placeholder="{$LANG.user.name_last} {$LANG.form.required}"></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="last_name" id="addr_last_name" value="{$DATA.last_name}" required>
+            <label for="addr_last_name">{$LANG.user.name_last}</label>
+         </div>
+      </div>
    </div>
    <div class="row">
-      <div class="small-12 large-8 columns"><label for="addr_company_name">{$LANG.address.company_name}</label><input type="text" name="company_name" id="addr_company_name" value="{$DATA.company_name}" placeholder="{$LANG.address.company_name}"></div>
+      <div class="small-12 large-8 columns">
+         <div class="floater">
+            <input type="text" name="company_name" id="addr_company_name" value="{$DATA.company_name}">
+            <label for="addr_company_name">{$LANG.address.company_name} {$LANG.common.optional}</label>
+         </div>
+      </div>
    </div>
    <address>
       <div class="row">
-         <div class="small-12 large-8 columns"><label for="addr_line1">{$LANG.address.line1} </label><input type="text" name="line1" id="addr_line1" value="{$DATA.line1}" required placeholder="{if $ADDRESS_LOOKUP}{$LANG.address.address_lookup}{else}{$LANG.address.line1} {$LANG.form.required}{/if}" autocomplete="off" autocorrect="off" class="address_lookup">
+         <div class="small-12 large-8 columns">
+            <div class="floater">
+               <input type="text" name="line1" id="addr_line1" value="{$DATA.line1}" required autocomplete="off" autocorrect="off" class="address_lookup">
+               <label for="addr_line1">{if $ADDRESS_LOOKUP}{$LANG.address.address_lookup}{else}{$LANG.address.line1}{/if}</label>
+            </div>
          </div>
       </div>
       {if $ADDRESS_LOOKUP}<p id="lookup_fail"><a href="#">{$LANG.address.address_not_found}</a></p>{/if}
       <div{if $ADDRESS_LOOKUP} class="hide"{/if} id="address_form">
       <div class="row">
-         <div class="small-12 large-8 columns"><label for="addr_line2">{$LANG.address.line2}</label><input type="text" name="line2" id="addr_line2" value="{$DATA.line2}" placeholder="{$LANG.address.line2}"></div>
+         <div class="small-12 large-8 columns">
+            <div class="floater">
+               <input type="text" name="line2" id="addr_line2" value="{$DATA.line2}">
+               <label for="addr_line2">{$LANG.address.line2}{if !empty($LANG.address.line2)}{$LANG.common.optional}{/if}</label>
+            </div>
+         </div>
       </div>
       <div class="row">
-         <div class="small-12 large-8 columns"><label for="addr_town">{$LANG.address.town}</label><input type="text" name="town" id="addr_town" value="{$DATA.town}" required placeholder="{$LANG.address.town} {$LANG.form.required}"></div>
+         <div class="small-12 large-8 columns">
+            <div class="floater">
+               <input type="text" name="town" id="addr_town" value="{$DATA.town}" required>
+               <label for="addr_town">{$LANG.address.town}</label>
+            </div>
+         </div>
       </div>
       <div class="row">
          <div class="small-12 large-8 columns">
@@ -93,11 +132,15 @@
          </div>
       </div>
       <div class="row">
-         <div class="small-12 large-8 columns"><label for="state-list">{$LANG.address.state}</label><input type="text" name="state" id="state-list" required value="{$DATA.state}" placeholder="{$LANG.address.state} {$LANG.form.required}"></div>
+         <div class="small-12 large-8 columns"><label for="state-list">{$LANG.address.state}</label><input type="text" name="state" id="state-list" required value="{$DATA.state}" placeholder="{$LANG.address.state}"></div>
       </div>
       <div class="row">
-         <div class="small-12 large-8 columns"><label for="addr_postcode">{$LANG.address.postcode}</label><input type="text" name="postcode" id="addr_postcode" value="{$DATA.postcode}" required placeholder="{$LANG.address.postcode} {$LANG.form.required}"></div>
-      </div>
+         <div class="small-12 large-8 columns">
+            <div class="floater">
+               <input type="text" name="postcode" id="addr_postcode" value="{$DATA.postcode}" required>
+               <label for="addr_postcode">{$LANG.address.postcode}</label>
+            </div>
+         </div>
       </div>
    </address>
    <div class="row">

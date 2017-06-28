@@ -21,7 +21,7 @@
             <div class="small-12 columns">
                <div class="floater">
                   <input type="text" autocomplete="off" name="username" id="login-username" value="{$USERNAME}" required>
-                  <label for="login-username" class="show-for-medium-up">{$LANG.user.email_address}</label>
+                  <label for="login-username">{$LANG.user.email_address}</label>
                </div>
             </div>
          </div>
@@ -29,7 +29,7 @@
             <div class="small-12 columns">
                <div class="floater">
                   <input type="password" autocomplete="off" name="password" id="login-password" required>
-                  <label for="login-password" class="show-for-medium-up">{$LANG.account.password}</label>
+                  <label for="login-password">{$LANG.account.password}</label>
                </div>
             </div>
          </div>

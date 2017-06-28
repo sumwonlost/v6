@@ -78,7 +78,7 @@
       <div class="small-12 large-6 columns">
          <div class="floater">
             <input type="text" name="username" id="login-username" autocomplete="username" value="{$USERNAME}" required disabled>
-            <label for="login-username" class="show-for-medium-up">{$LANG.user.email_address}</label>
+            <label for="login-username">{$LANG.user.email_address}</label>
          </div>
       </div>
    </div>
@@ -86,7 +86,7 @@
       <div class="small-12 large-6 columns">
          <div class="floater">
             <input type="password" name="password" id="login-password" autocomplete="current-password" required disabled>
-            <label for="login-password" class="show-for-medium-up">{$LANG.account.password}</label>
+            <label for="login-password">{$LANG.account.password}</label>
          </div>
       </div>
    </div>
@@ -104,7 +104,7 @@
       <div class="small-4 columns">
          <div class="floater">
             <input type="text" name="user[title]" id="user_title"  class="capitalize" value="{$USER.title}" autocomplete="honorific-prefix">
-            <label for="user_title" class="show-for-medium-up">{$LANG.user.title} {$LANG.common.optional}</label>
+            <label for="user_title">{$LANG.user.title} {$LANG.common.optional}</label>
          </div>
       </div>
    </div>
@@ -112,7 +112,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="user[first_name]" id="user_first" required value="{$USER.first_name}" autocomplete="given-name">
-            <label for="user_first" class="show-for-medium-up">{$LANG.user.name_first}</label>
+            <label for="user_first">{$LANG.user.name_first}</label>
          </div>
       </div>
    </div>
@@ -120,7 +120,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="user[last_name]" id="user_last" required value="{$USER.last_name}" autocomplete="family-name">
-            <label for="user_last" class="show-for-medium-up">{$LANG.user.name_last}</label>
+            <label for="user_last">{$LANG.user.name_last}</label>
          </div>
       </div>
    </div>
@@ -128,7 +128,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="user[email]" id="user_email" required value="{$USER.email}" autocomplete="email">
-            <label for="user_email" class="show-for-medium-up">{$LANG.common.email}</label>
+            <label for="user_email">{$LANG.common.email}</label>
          </div>
       </div>
    </div>
@@ -136,7 +136,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="user[phone]" id="user_phone" required value="{$USER.phone}" autocomplete="tel">
-            <label for="user_phone" class="show-for-medium-up">{$LANG.address.phone}</label>
+            <label for="user_phone">{$LANG.address.phone}</label>
          </div>
       </div>
    </div>
@@ -144,7 +144,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="user[mobile]" id="user_mobile" value="{$USER.mobile}" autocomplete="tel">
-            <label for="user_mobile" class="show-for-medium-up">{$LANG.address.mobile} {$LANG.common.optional}</label>
+            <label for="user_mobile">{$LANG.address.mobile} {$LANG.common.optional}</label>
          </div>
       </div>
    </div>
@@ -154,7 +154,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="billing[company_name]" id="addr_company"  value="{$BILLING.company_name}" autocomplete="organization">
-            <label for="addr_company" class="show-for-medium-up">{$LANG.address.company_name} {$LANG.common.optional}</label>
+            <label for="addr_company">{$LANG.address.company_name} {$LANG.common.optional}</label>
          </div>
       </div>
    </div>
@@ -175,7 +175,7 @@
          <div class="small-12 large-8 columns">
             <div class="floater">
                <input type="text" name="billing[line2]" id="addr_line2"  value="{$BILLING.line2}" autocomplete="address-line2">
-               <label for="addr_line2" class="show-for-medium-up">{$LANG.address.line2}{if !empty($LANG.address.line2)} {$LANG.common.optional}{/if}</label>
+               <label for="addr_line2">{$LANG.address.line2}{if !empty($LANG.address.line2)} {$LANG.common.optional}{/if}</label>
             </div>
          </div>
       </div>
@@ -183,7 +183,7 @@
          <div class="small-12 large-8 columns">
             <div class="floater">
                <input type="text" name="billing[town]" id="addr_town" required value="{$BILLING.town}" autocomplete="address-level2">
-               <label for="addr_town" class="show-for-medium-up">{$LANG.address.town}</label>
+               <label for="addr_town">{$LANG.address.town}</label>
             </div>
          </div>
       </div>
@@ -191,13 +191,13 @@
          <div class="small-12 large-8 columns">
             <div class="floater">
                <input type="text" name="billing[postcode]" id="addr_postcode"  class="uppercase required" value="{$BILLING.postcode}" autocomplete="postal-code">
-               <label for="addr_postcode" class="show-for-medium-up">{$LANG.address.postcode}</label>
+               <label for="addr_postcode">{$LANG.address.postcode}</label>
             </div>
          </div>
       </div>
       <div class="row">
          <div class="small-12 large-8 columns">
-            <label for="country-list" class="show-for-medium-up">{$LANG.address.country}</label>
+            <label for="country-list">{$LANG.address.country}</label>
             <select name="billing[country]" class="nosubmit" rel="state-list" id="country-list" autocomplete="country-name">
             {foreach from=$COUNTRIES item=country}
                <option value="{$country.numcode}" {$country.selected}>{$country.name}</option>
@@ -207,7 +207,7 @@
       </div>
       <div class="row">
          <div class="small-12 large-8 columns">  
-            <label for="state-list" class="show-for-medium-up">{$LANG.address.state}</label>    
+            <label for="state-list">{$LANG.address.state}</label>    
             <input type="text" name="billing[state]" id="state-list" required value="{$BILLING.state}" autocomplete="address-line1">
          </div>
       </div>
@@ -215,17 +215,32 @@
 </address>
 {if $TERMS_CONDITIONS}
 <div class="row">
-   <div class="small-12 large-8 columns"><span id="error_terms_agree"><input type="checkbox" id="reg_terms" name="terms_agree" value="1" {$TERMS_CONDITIONS_CHECKED} rel="error_terms_agree"><label for="reg_terms">{$LANG.account.register_terms_agree_link|replace:'%s':{$TERMS_CONDITIONS}}</label></span></div>
+   <div class="small-12 large-8 columns">
+      <div class="non-floater">
+         <span id="error_terms_agree">
+            <input type="checkbox" id="reg_terms" name="terms_agree" value="1" {$TERMS_CONDITIONS_CHECKED} rel="error_terms_agree">
+            <label for="reg_terms">{$LANG.account.register_terms_agree_link|replace:'%s':{$TERMS_CONDITIONS}}</label>
+         </span>
+      </div>
+   </div>
 </div>
 {/if}
 <div class="row">
    <div class="small-12 large-8 columns">
-      <input type="checkbox" id="mailing_list" name="mailing_list" value="1" {$MAILING_LIST_SUBSCRIBE}><label for="mailing_list">{$LANG.account.register_mailing}</label>
+      <div class="non-floater">
+         <input type="checkbox" id="mailing_list" name="mailing_list" value="1" {$MAILING_LIST_SUBSCRIBE}>
+         <label for="mailing_list">{$LANG.account.register_mailing}</label>
+      </div>
    </div>
 </div>
 {if $ALLOW_DELIVERY_ADDRESS}
 <div class="row">
-   <div class="small-12 large-8 columns"><input type="checkbox" name="delivery_is_billing" id="delivery_is_billing" {$DELIVERY_CHECKED}><label for="delivery_is_billing">{$LANG.address.delivery_is_billing}</label></div>
+   <div class="small-12 large-8 columns">
+      <div class="non-floater">
+         <input type="checkbox" name="delivery_is_billing" id="delivery_is_billing" {$DELIVERY_CHECKED}>
+         <label for="delivery_is_billing">{$LANG.address.delivery_is_billing}</label>
+      </div>
+   </div>
 </div>
 {/if}
 {if $ALLOW_DELIVERY_ADDRESS}
@@ -235,7 +250,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="delivery[first_name]" id="del_first"  required value="{$DELIVERY.first_name}"  autocomplete="given-name">
-            <label for="del_first" class="show-for-medium-up">{$LANG.user.name_first}</label>
+            <label for="del_first">{$LANG.user.name_first}</label>
          </div>
       </div>
    </div>
@@ -243,7 +258,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="delivery[last_name]" id="del_last"  required value="{$DELIVERY.last_name}"  autocomplete="family-name">
-            <label for="del_last" class="show-for-medium-up">{$LANG.user.name_last}</label>
+            <label for="del_last">{$LANG.user.name_last}</label>
          </div>
       </div>
    </div>
@@ -251,7 +266,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="text" name="delivery[company_name]" id="del_company"  value="{$DELIVERY.company_name}" autocomplete="organization">
-            <label for="del_company" class="show-for-medium-up">{$LANG.address.company_name} {$LANG.common.optional}</label>
+            <label for="del_company">{$LANG.address.company_name} {$LANG.common.optional}</label>
          </div>
       </div>
    </div>
@@ -260,7 +275,7 @@
          <div class="small-12 large-8 columns">
             <div class="floater">
                <input type="text" name="delivery[line1]" id="del_line1" required value="{$DELIVERY.line1}" autocomplete="address-line1">
-               <label for="del_line1" class="show-for-medium-up">{$LANG.address.line1}</label>
+               <label for="del_line1">{$LANG.address.line1}</label>
             </div>
          </div>
       </div>
@@ -268,7 +283,7 @@
          <div class="small-12 large-8 columns">
             <div class="floater">
                <input type="text" name="delivery[line2]" id="del_line2"  value="{$DELIVERY.line2}" placeholder="{$LANG.address.line2}" autocomplete="address-line2">
-               <label for="del_line2" class="show-for-medium-up">{$LANG.address.line2}{if !empty($LANG.address.line2)} {$LANG.common.optional}{/if}</label>
+               <label for="del_line2">{$LANG.address.line2}{if !empty($LANG.address.line2)} {$LANG.common.optional}{/if}</label>
             </div>
          </div>
       </div>
@@ -276,7 +291,7 @@
          <div class="small-12 large-8 columns">
             <div class="floater">
                <input type="text" name="delivery[town]" id="del_town" required value="{$DELIVERY.town}" autocomplete="address-level2">
-               <label for="del_town" class="show-for-medium-up">{$LANG.address.town}</label>
+               <label for="del_town">{$LANG.address.town}</label>
             </div>
          </div>
       </div>
@@ -284,13 +299,13 @@
          <div class="small-12 large-8 columns">
             <div class="floater">
                <input type="text" name="delivery[postcode]" id="del_postcode"  class="uppercase required" value="{$DELIVERY.postcode}" autocomplete="postal-code">
-               <label for="del_postcode" class="show-for-medium-up">{$LANG.address.postcode}</label>
+               <label for="del_postcode">{$LANG.address.postcode}</label>
             </div>
          </div>
       </div>
       <div class="row">
          <div class="small-12 large-8 columns">
-            <label for="delivery_country" class="show-for-medium-up">{$LANG.address.country}</label>
+            <label for="delivery_country">{$LANG.address.country}</label>
             <select name="delivery[country]" id="delivery_country"  class="nosubmit country-list" rel="delivery_state" autocomplete="country-name">
             {foreach from=$COUNTRIES item=country}
                <option value="{$country.numcode}" {$country.selected_d}>{$country.name}</option>
@@ -300,7 +315,7 @@
       </div>
       <div class="row">
          <div class="small-12 large-8 columns">
-            <label for="delivery_state" class="show-for-medium-up">{$LANG.address.state}</label>
+            <label for="delivery_state">{$LANG.address.state}</label>
             <input type="text" name="delivery[state]" id="delivery_state" required value="{$DELIVERY.state}" placeholder="{$LANG.address.state} {$LANG.form.required}" autocomplete="address-level1">
          </div>
       </div>
@@ -311,15 +326,20 @@
    var county_list = {$STATE_JSON};
 </script>
 <div class="row">
-   <div class="small-12 large-8 columns"><input type="checkbox" name="register" id="show-reg" value="1" {$REGISTER_CHECKED}><label for="show-reg">{$LANG.account.create_account}</label></div>
+   <div class="small-12 large-8 columns">
+      <div class="non-floater">
+         <input type="checkbox" name="register" id="show-reg" value="1" {$REGISTER_CHECKED}>
+         <label for="show-reg">{$LANG.account.create_account}</label>
+      </div>
+   </div>
 </div>
 <div id="account-reg">
-   <h3>{$LANG.account.password}</h3>
+   <h3 class="hide">{$LANG.account.password}</h3>
    <div class="row">
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="password" autocomplete="off" name="password" id="reg_password" required autocomplete="new-password">
-            <label for="reg_password" class="show-for-medium-up">{$LANG.account.password}</label>
+            <label for="reg_password">{$LANG.account.password}</label>
          </div>
       </div>
    </div>
@@ -327,7 +347,7 @@
       <div class="small-12 large-8 columns">
          <div class="floater">
             <input type="password" autocomplete="off" name="passconf" id="reg_passconf" required autocomplete="new-password">
-            <label for="reg_passconf" class="show-for-medium-up">{$LANG.user.password_confirm}</label>
+            <label for="reg_passconf">{$LANG.user.password_confirm}</label>
          </div>
       </div>
    </div>
@@ -335,8 +355,10 @@
 {include file='templates/content.recaptcha.php'}
 </div>
 {/if}
-<label for="delivery_comments" class="return">{$LANG.basket.your_comments} {$LANG.common.optional}</label>
-<textarea name="comments" id="delivery_comments">{$VAL_CUSTOMER_COMMENTS}</textarea>
+<div class="floater">
+   <textarea name="comments" id="delivery_comments">{$VAL_CUSTOMER_COMMENTS}</textarea>
+   <label for="delivery_comments" class="return">{$LANG.basket.your_comments} {$LANG.common.optional}</label>
+</div>
 
 <div class="hide" id="validate_required">{$LANG.form.required}</div>
 <div class="hide" id="validate_field_required">{$LANG.form.field_required}</div>

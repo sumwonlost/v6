@@ -10,10 +10,9 @@ footer a {
 }
 
 /* Start Floating Labels */
-.floater {
+.floater, .non-floater {
   position: relative;
-  margin-bottom: 20px;
-  
+  margin-bottom: 25px;
 }
 
 .floater input:-webkit-autofill,
@@ -56,6 +55,7 @@ footer a {
   top: 8px;
   bottom: 0;
   transition: all 0.2s ease-in;
+  color: #999999;
 }
 
 .floater.has-value input,
@@ -75,17 +75,23 @@ footer a {
 .floater select:-webkit-autofill:focus ~ label,
 .floater input:focus ~ label,
 .floater input:disabled[value] ~ label,
-.floater.has-value input ~ label{
-  top: -10px;
-  color: #2695b6;
+.floater.has-value input ~ label {
+  top: -12px;
+  color: #4d4d4d;
 }
 
 .floater textarea:focus ~ label,
 .floater.has-value textarea ~ label {
   top: -17px;
-  color: #2695b6;
+  color: #4d4d4d;
 }
 /* End Floating Labels */
+
+span.error, small.error {
+    color: #c60f13;
+    background: none;
+    padding: 0 0 0;
+}
 
 a.open-clearing {
     display: block;
