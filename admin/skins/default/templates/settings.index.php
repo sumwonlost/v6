@@ -16,6 +16,7 @@
          <legend>{$LANG.settings.title_geographical}</legend>
          <div><label for="store_name">{$LANG.settings.store_name}</label><span><input name="config[store_name]" id="store_name" type="text" class="textbox" value="{$CONFIG.store_name}"></span></div>
          <div><label for="store_address">{$LANG.address.line1}</label><span><textarea name="config[store_address]" id="store_address" class="textbox">{$CONFIG.store_address}</textarea></span></div>
+         <div><label for="store-town">{$LANG.address.town}</label><span><input type="text" name="config[store_town]" id="store_town" class="textbox" value="{$CONFIG.store_town}"></span></div>        
          <div><label for="country-list">{$LANG.address.country}</label><span><select name="config[store_country]" id="country-list" class="textbox">
             {foreach from=$COUNTRIES item=country}<option value="{$country.numcode}"{$country.selected}>{$country.name}</option>{/foreach}
             </select></span>
