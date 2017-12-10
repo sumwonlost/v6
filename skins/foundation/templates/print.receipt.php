@@ -28,6 +28,7 @@
          <div class="small-6 columns text-right">
             <strong>{$CONFIG.store_name}</strong><br>
             {$STORE.address|nl2br}<br>
+            {$STORE.town}<br>
             {$STORE.county}<br>
             {$STORE.postcode}<br>
             {$STORE.country}<br>
